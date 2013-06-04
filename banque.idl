@@ -1,0 +1,15 @@
+#include <compte.idl>
+
+exception CompteAlreadyExist{
+	string cae;
+};
+
+exception CompteNullException{
+	string cne;
+};
+
+interface IBanque{
+	//boolean creationCompte(in string p_nom)raises(CompteAlreadyExist);
+	//boolean deleteCompte(in string p_nom);
+	ICompte rechercheCompte(in string p_nom)raises(CompteNullException); 
+};

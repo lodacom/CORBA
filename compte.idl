@@ -1,0 +1,10 @@
+exception SoldeDeficitaire {
+	string message;
+};
+
+interface ICompte{
+	attribute string nom;
+	attribute float compte;
+	float debit(in float p_debit) raises(SoldeDeficitaire);
+	float credit(in float p_credit);
+};
